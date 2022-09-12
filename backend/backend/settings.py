@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'todo',
     'corsheaders',
     'rest_framework',
+    'login',
+    'signup',
 ]
 
 MIDDLEWARE = [
@@ -103,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-#whitelisting React port
+# whitelisting React port
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
