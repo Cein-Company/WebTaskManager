@@ -15,10 +15,21 @@ function Layout() {
         </div>
       </div>
       <div className="layout-login__right">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className="layout-login__right__text">
+          <h1>Login</h1>
+        </div>
+        <div className="layout-login__right__inputs">
+          <input id="username" type="text" placeholder="Username" />
+          <input id="password" type="password" placeholder="Password" />
+        </div>
+        <div className="layout-login__right__forgot">
+          <p>
+            Forgot your password? <a href="#">Click here</a>
+          </p>
+        </div>
+        <div className="layout-login__right__button">
+          <button>Submit</button>
+        </div>
       </div>
     </div>
   );
