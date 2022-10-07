@@ -2,14 +2,20 @@
   display: flex;
   min-height: 100vh;
   align-items: center;
+  text-align: center;
 }
 
 .layout-login__left {
-  flex-grow: 2;
+  flex: 2;
+  color: #f5f5dc;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 }
 
 .layout-login__right {
-  flex-grow: 3;
+  flex: 3;
+  color: #29c27b;
 }
 
 .spacer {
@@ -22,4 +28,37 @@
 
 .wave {
   background-image: url('../../../assets/wave.svg');
+}
+
+.layout-login__left__text p {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.layout-login__left__text span {
+  font-size: 1.3rem;
+}
+
+.layout-login__left__text {
+  order: 1;
+}
+
+.layout-login__left__button {
+  order: 2;
+}
+
+.layout-login__left__button a {
+  color: #f5f5dc;
+  font-size: 1.6rem;
+  border: #f5f5dc 2px solid;
+  padding: 10px 50px;
+  border-radius: 45px;
+  transition: all 0.4s ease-out;
+}
+
+.layout-login__left__button a:hover {
+  color: #29c27b;
+  background-color: #f5f5dc;
+  transition: all 0.4s ease-out;
 }
