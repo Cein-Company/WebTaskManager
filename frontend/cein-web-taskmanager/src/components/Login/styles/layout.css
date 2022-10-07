@@ -48,7 +48,6 @@
 
 .layout-login__left__button {
   order: 2;
-  margin-top: 20px;
 }
 
 .layout-login__left__button a {
@@ -67,14 +66,14 @@
 }
 
 .layout-login__right__text {
-  order: 1;
+  order: 0;
 }
 
 .layout-login__right__text h1 {
   font-size: 3rem;
 }
 
-.layout-login__right__inputs {
+.layout-login__right__inputs form {
   order: 2;
   display: flex;
   flex-direction: column;
@@ -113,7 +112,7 @@
   order: 4;
 }
 
-.layout-login__right__button button {
+.layout-login__right__inputs button {
   color: #29c27b;
   font-size: 1.4rem;
   border: #29c27b 2px solid;
@@ -121,9 +120,10 @@
   padding: 10px 50px;
   border-radius: 45px;
   transition: all 0.4s ease-out;
+  margin-top: 20px;
 }
 
-.layout-login__right__button button:hover {
+.layout-login__right__inputs button:hover {
   color: #f5f5dc;
   background-color: #29c27b;
   transition: all 0.4s ease-out;
