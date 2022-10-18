@@ -1,8 +1,21 @@
 import '../styles/layout.css';
+import axios from 'axios';
+import { useState } from 'react';
 
 function Layout() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const onChangeUsernameHandler = (e) => {
+    setUsername(e.target.value);
+  };
+  const onChangePasswordHandler = (e) => {
+    setPassword(e.target.value);
+  };
   const submitHandler = (e) => {
     e.preventDefault();
+    const result = axios.post('http://localhost8000:/api');
+    setUsername('');
+    setPassword('');
   };
 
   return (
@@ -10,7 +23,7 @@ function Layout() {
       <div className="layout-login__left">
         <div className="layout-login__left__text">
           <p>
-            CEIN <br /> Task Manager
+            Cein <br /> Task Manager
           </p>
           <span>Don't have an account? Sign up!</span>
         </div>
@@ -24,8 +37,20 @@ function Layout() {
         </div>
         <div className="layout-login__right__inputs">
           <form onSubmit={submitHandler}>
-            <input id="username" type="text" placeholder="Username" />
-            <input id="password" type="password" placeholder="Password" />
+            <input
+              value={username}
+              id="username"
+              type="text"
+              onChange={onChangeUsernameHandler}
+              placeholder="Username"
+            />
+            <input
+              value={password}
+              id="password"
+              type="password"
+              onChange={onChangePasswordHandler}
+              placeholder="Password"
+            />
             <button type="submit">Submit</button>
           </form>
         </div>
