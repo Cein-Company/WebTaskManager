@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'login',
     'signup',
+    'loginapi',
     'users.apps.UsersConfig',
 ]
 
@@ -112,9 +113,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # whitelisting React port
 
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
-)
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:3000",
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/

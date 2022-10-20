@@ -13,9 +13,13 @@ function Layout() {
   };
   const submitHandler = (e) => {
     e.preventDefault();
-    const result = axios.post('http://localhost8000:/api');
+    const result = axios.post('http://127.0.0.1:8000/api/login', {
+      username: username,
+      password: password,
+    });
     setUsername('');
     setPassword('');
+    console.log(result); //To be completed...
   };
 
   return (
