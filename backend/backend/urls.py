@@ -35,4 +35,5 @@ urlpatterns = [
     path('signup/', include(router1.urls)),
     path('login/', include(router2.urls)),
     path('', login_views.front, name='front'),
+    path('', include('loginapi.urls')),
 ]
