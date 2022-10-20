@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'login',
     'signup',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -131,7 +132,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATICFILES_DIRS = [
-    os.path.join(FRONT_DIR, 'frontend', 'cein-web-taskmanager', 'dist', 'assets'),
+    os.path.join(FRONT_DIR, 'frontend',
+                 'cein-web-taskmanager', 'dist', 'assets'),
 ]
 
 STATIC_URL = 'static/'
